@@ -31,7 +31,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  var arrNames = ['taj','sai','raju','man'];
+  var arrNames = ['taj','sai','raju','man','konnu','veru','ramu','khan','vinay','surya','japan','vekat','ramudu'];
 
   @override
   Widget build(BuildContext context) {
@@ -41,34 +41,18 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: ListView.separated(itemBuilder: (context, index){
-        return Row(
-          children: [
+        return ListTile(
+          leading: Text('${index+1}'),
+          title: Text(arrNames[index]),
+          subtitle: Text('Number'),
+          trailing: Icon(Icons.add),
 
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),),
-
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
-                  ),
-                ],
-              ),
-            ),
-
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
-            ),
-          ],
         );
       },
       itemCount: arrNames.length,
         // scrollDirection: Axis.horizontal,
         separatorBuilder: (context, index){
-            return Divider(height: 100,thickness: 4,);
+            return Divider(height: 20,thickness: 10,);
         },
         // itemExtent: 100,
       )
@@ -103,3 +87,27 @@ class _MyHomePageState extends State<MyHomePage> {
 // )
 // ],
 // ),
+
+// Row(
+// children: [
+//
+// Padding(
+// padding: const EdgeInsets.all(8.0),
+// child: Column(
+// children: [
+// Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),),
+//
+// Padding(
+// padding: const EdgeInsets.all(8.0),
+// child: Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+// ),
+// ],
+// ),
+// ),
+//
+// Padding(
+// padding: const EdgeInsets.all(8.0),
+// child: Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+// ),
+// ],
+// );
