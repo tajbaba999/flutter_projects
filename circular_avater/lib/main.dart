@@ -41,22 +41,23 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
 
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-
-        title: Text(widget.title),
+        title: Text('Hello'),
       ),
-      body: Center(
-        child:Container(
-          width: 100,
-          height: 100,
-          child: CircleAvatar(
-            backgroundImage: AssetImage('assets/images/boy1.png' ),
-            backgroundColor: Colors.lightGreen,
-            radius: 300,
-          ),
-        )
-
-      ),
+      body:Text('Hello World!')
     );
   }
 }
+
+
+// Center(
+// child:Container(
+// width: 100,
+// height: 100,
+// child: CircleAvatar(
+// backgroundImage: AssetImage('assets/images/boy1.png' ),
+// backgroundColor: Colors.lightGreen,
+// radius: 300,
+// ),
+// )
+//
+// ),
