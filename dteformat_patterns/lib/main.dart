@@ -43,8 +43,45 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text('Date and Time'),
         ),
-        body: Text('Date for :${DateFormat}',style: TextStyle(fontSize: 35),)
-    );
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Selected Date',
+                  style: TextStyle(fontSize: 25),
+                ),
+                ElevatedButton(onPressed: () async {
+                  DateTime? datepicker = await showDatePicker(
+                      context: context,
+                      initialDate: DateTime.now(),
+                      firstDate: DateTime(2021),
+                      lastDate: DateTime(2024));
 
+                  if(datepicker != null){
+                    print('Date pciker: ${datepicker.day}-${datepicker.month}-${datepicker.day}-${datepicker.hour}-${datepicker.minute}');
+                  }
+                }, child: Text('show'));
+                Container(
+                  height: 10,
+                ),
+                ElevatedButton(onPressed: () async{
+                    TimeOfDay? pickedTime = ShowTimepicker(
+                      context = context,
+                      initialTime : TimeOfDay.now(),
+                      initialEntryMode : TimePcikerEntryMode.input
+                    );
+
+                    if(pickedTime != null){
+                      print('Time selected : ${pickedTime.hour} : ${pickedTime.minute}')
+                    }
+
+                  }
+                )
+
+              ],
+            ),
+          ),
+        );
   }
 }
