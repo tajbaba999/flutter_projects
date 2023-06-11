@@ -17,7 +17,8 @@ class RoundedButton extends StatelessWidget{
 
     @override
   Widget build(BuildContext context) {
-    return Center(
+    return Center( s
+
       child: ElevatedButton(
           onPressed: (){
             callback!();
