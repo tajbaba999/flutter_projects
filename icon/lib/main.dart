@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,9 +42,18 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-          child: Icon(Icons.home,
-            size: 100,
-          color: Colors.deepOrangeAccent,),
+          child: Row(
+            children: [
+              Icon(Icons.home,
+                size: 100,
+              color: Colors.deepOrangeAccent,),
+              FaIcon(
+                FontAwesomeIcons.googlePay,
+                size: 100,
+                color: Colors.deepOrangeAccent,
+              )
+            ],
+          ),
       ),
       // This trailing comma makes auto-formatting nicer for build methods.
     );
