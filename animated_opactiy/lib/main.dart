@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 setState(() {
                   opacity =1.0;
                   isVisible = true;
-                  txt = "close";
+                  txt = "close";d
                 });
               }
 
